@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Negocio Pro | Soluciones Digitales & Crecimiento</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-900 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-rocket text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                    MiNegocio<span class="text-brand-500">Pro</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-brand-500 transition-colors">Inicio</a>
+                <a href="#servicios" class="hover:text-brand-500 transition-colors">Servicios</a>
+                <a href="#nosotros" class="hover:text-brand-500 transition-colors">Nosotros</a>
+                <a href="#testimonios" class="hover:text-brand-500 transition-colors">Reseñas</a>
+                <a href="#contacto" class="hover:text-brand-500 transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium text-sm shadow-lg shadow-emerald-500/25 transition-all hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-4">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Inicio</a>
+            <a href="#servicios" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Nosotros</a>
+            <a href="#testimonios" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Reseñas</a>
+            <a href="#contacto" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Contacto</a>
+            <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20más%20información" 
+               target="_blank" 
+               class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-500 text-white font-semibold">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Escribir por WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="inicio" class="relative overflow-hidden gradient-bg pt-16 pb-24 lg:pt-28 lg:pb-36">
+            <!-- Decorative Lights -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Hero Text -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-8">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-medium">
+                            <i class="fa-solid fa-sparkles text-xs"></i>
+                            <span>Despegue y Crecimiento Digital Acelerado</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+                            Lleva tu negocio al siguiente nivel con <span class="bg-gradient-to-r from-brand-500 via-indigo-400 to-purple-400 bg-clip-text text-transparent">soluciones de IA</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            Ofrecemos herramientas accesibles, diseño web profesional y automatizaciones estratégicas para potenciar tus ventas sin importar el tamaño de tu empresa.
+                        </p>
+
+                        <!-- CTA buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold shadow-lg shadow-brand-600/30 transition-all hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2">
+                                <span>Solicitar Asesoría Gratis</span>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                            <a href="#servicios" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-white/10 text-white font-semibold transition-all text-center">
+                                Explorar Servicios
+                            </a>
+                        </div>
+
+                        <!-- Trust metrics -->
+                        <div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-4 text-center lg:text-left">
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-bold text-white">+150</p>
+                                <p class="text-xs sm:text-sm text-slate-400">Clientes satisfechos</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-bold text-white">99%</p>
+                                <p class="text-xs sm:text-sm text-slate-400">Retorno de inversión</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-bold text-white">24/7</p>
+                                <p class="text-xs sm:text-sm text-slate-400">Atención continua</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 space-y-6">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    </div>
+                                    <span class="text-xs font-mono text-slate-400">Panel de Control</span>
+                                </div>
+
+                                <div class="bg-slate-950/60 rounded-2xl p-4 border border-slate-800 space-y-4">
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span class="text-slate-400">Estado de Automatización</span>
+                                        <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Activo</span>
+                                    </div>
+                                    <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gradient-to-r from-brand-500 to-emerald-400 w-3/4 rounded-full"></div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div class="p-3 rounded-xl bg-slate-800/40 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-chart-line text-brand-400"></i>
+                                            <span>Ventas Semanales</span>
+                                        </div>
+                                        <span class="font-semibold text-emerald-400">+34%</span>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-slate-800/40 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-user-plus text-indigo-400"></i>
+                                            <span>Nuevos Clientes</span>
+                                        </div>
+                                        <span class="font-semibold text-white">+128</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-24 bg-slate-900 border-t border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <h2 class="text-xs sm:text-sm font-bold tracking-widest text-brand-500 uppercase">Nuestros Servicios</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Todo lo que necesitas para escalar tu proyecto</p>
+                    <p class="text-slate-400">Diseñados a medida para maximizar resultados utilizando tecnología inteligente y accesible.</p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card rounded-2xl p-8 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Diseño Web & Landing Pages</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Sitios ultramodernos, veloces y optimizados para dispositivos móviles que convierten a visitantes en clientes reales.
+                        </p>
+                        <a href="#contacto" class="text-brand-400 font-semibold text-sm inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card rounded-2xl p-8 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+                        <div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Automatización con IA</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Flujos automatizados para atenciones por WhatsApp, respuesta a correos y organización de datos sin perder tiempo manual.
+                        </p>
+                        <a href="#contacto" class="text-brand-400 font-semibold text-sm inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card rounded-2xl p-8 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 group">
+                        <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Estrategia Digital & Ads</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Campañas de publicidad optimizadas para atraer clientes potenciales cualificados desde el primer día.
+                        </p>
+                        <a href="#contacto" class="text-brand-400 font-semibold text-sm inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                            Saber más <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="nosotros" class="py-24 bg-slate-950 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Image Placeholder -->
+                    <div class="relative">
+                        <div class="aspect-video sm:aspect-square rounded-3xl overflow-hidden bg-slate-800 border border-slate-700 relative">
+                            <img src="https://placehold.co/800x800/1e293b/3b82f6?text=Equipo+de+Trabajo" alt="Sobre Nosotros" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="space-y-6">
+                        <h2 class="text-xs sm:text-sm font-bold tracking-widest text-brand-500 uppercase">Sobre Nosotros</h2>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Impulsamos el éxito de pequeños y medianos negocios</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Creemos en democratizar la tecnología. Nuestro objetivo es brindarte soluciones digitales de alto impacto a un costo accesible para que puedas escalar tu marca sin complicaciones.
+                        </p>
+                        
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Enfoque orientados a resultados</h4>
+                                    <p class="text-sm text-slate-400">Cada solución está pensada para aumentar ventas y captar clientes prospecto.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Soporte continuo y cercanía</h4>
+                                    <p class="text-sm text-slate-400">No solo entregamos un servicio, te acompañamos durante todo el camino.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonios" class="py-24 bg-slate-900 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <h2 class="text-xs sm:text-sm font-bold tracking-widest text-brand-500 uppercase">Testimonios</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Lo que dicen nuestros clientes</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"Mi negocio incrementó las consultas diarias a través de WhatsApp desde la primera semana de lanzar la landing page."</p>
+                        <div class="flex items-center gap-3 pt-2">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white">
+                                CM
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Carlos Martínez</h4>
+                                <p class="text-xs text-slate-400">Consultor Independiente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"La atención y velocidad con la que configuraron mis respuestas automáticas me ahorraron horas de trabajo al día."</p>
+                        <div class="flex items-center gap-3 pt-2">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white">
+                                LG
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Lucía Gómez</h4>
+                                <p class="text-xs text-slate-400">Fundadora de Boutique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic">"Excelente inversión. El diseño es limpio y moderno, justo lo que necesitaba para proyectar confianza."</p>
+                        <div class="flex items-center gap-3 pt-2">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white">
+                                AR
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Alejandro Ruiz</h4>
+                                <p class="text-xs text-slate-400">Director de Agencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-24 bg-slate-950 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <h2 class="text-xs sm:text-sm font-bold tracking-widest text-brand-500 uppercase">Contacto</h2>
+                            <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Hablemos sobre tu proyecto</h3>
+                            <p class="text-slate-400 mt-4 leading-relaxed">
+                                Completa el formulario o contáctanos directamente para agendar una sesión inicial completamente gratuita.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Correo Electrónico</p>
+                                    <p class="font-semibold text-white">contacto@minegociopro.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">WhatsApp Directo</p>
+                                    <a href="https://wa.me/1234567890" target="_blank" class="font-semibold text-white hover:text-emerald-400 transition-colors">
+                                        +54 9 11 1234-5678
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800">
+                            <!-- Alert Message Box -->
+                            <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Nombre completo</label>
+                                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm" placeholder="Tu nombre">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Correo de contacto</label>
+                                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm" placeholder="tu@email.com">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Servicio de interés</label>
+                                    <select id="service" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                        <option value="landing-page">Diseño Web & Landing Page</option>
+                                        <option value="automatizacion">Automatización con IA</option>
+                                        <option value="marketing">Estrategia Digital</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Mensaje o Detalle</label>
+                                    <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm" placeholder="Cuéntanos un poco sobre tu proyecto..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold shadow-lg shadow-brand-600/30 transition-all hover:scale-[1.01] active:scale-95 text-center">
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center space-y-4 sm:space-y-0">
+            <p class="text-sm text-slate-500">
+                &copy; 2026 MiNegocioPro. Todos los derechos reservados.
+            </p>
+            <div class="flex justify-center gap-6 text-slate-400">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submit Handler (Custom Alert Notification)
+        const contactForm = document.getElementById('contact-form');
+        const formAlert = document.getElementById('form-alert');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+
+            // Display success notification without standard alerts
+            formAlert.className = "mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 block";
+            formAlert.innerHTML = `¡Gracias <strong>${name}</strong>! Hemos recibido tu solicitud correctamente. Te responderemos a la brevedad.`;
+
+            // Reset form
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
